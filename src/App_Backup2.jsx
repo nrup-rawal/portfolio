@@ -3,7 +3,7 @@ import { Shield, Code, FileText, Award, Mail, Linkedin, Github, ExternalLink, Do
 
 const Portfolio = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'GRC & Cloud Security | Azure Security Engineer Associate (AZ-500) | IT operations @ Synoptek | MBA Cybersecurity Management';
+  const fullText = 'GRC Specialist | MBA Candidate | Documentation Expert';
   const [showCursor, setShowCursor] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   
@@ -43,22 +43,22 @@ const Portfolio = () => {
   const opacity = Math.max(0, 1 - scrollY / 200);
 
   return (
-    <div className="bg-slate-950 min-h-screen text-white overflow-x-hidden" style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>
+    <div className="bg-slate-950 min-h-screen text-white overflow-x-hidden font-['Inter']" style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>
       {/* Large Gradient Orbs Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 -left-40 w-64 sm:w-96 h-64 sm:h-96 bg-blue-600/30 rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-0 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/3 w-80 sm:w-[500px] h-80 sm:h-[500px] bg-indigo-600/25 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-violet-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 -left-40 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-indigo-600/25 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl"></div>
       </div>
 
       {/* Frosted Glass Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/5 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-[2000px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
-          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+          <div className="text-xl sm:text-2xl font-bold text-white">
             NR
           </div>
-          <div className="hidden sm:hidden md:flex gap-3 lg:gap-6 xl:gap-8">
+          <div className="hidden md:flex gap-6 lg:gap-8">
             {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
               <a
                 key={item}
@@ -67,29 +67,27 @@ const Portfolio = () => {
                   e.preventDefault();
                   document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-slate-300 hover:text-white transition-colors font-medium cursor-pointer text-xs lg:text-sm xl:text-base"
+                className="text-slate-300 hover:text-white transition-colors font-medium cursor-pointer text-sm"
               >
                 {item}
               </a>
             ))}
           </div>
-          {/* Mobile/Tablet menu indicator */}
-          <div className="md:hidden text-slate-400 text-xs">Scroll ↓</div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative pt-16 sm:pt-20 lg:pt-24 px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="max-w-7xl w-full mx-auto text-center relative z-10">
-          <div className="mb-6 sm:mb-8">
-            <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-8 sm:mb-10 leading-tight">Nrup Rawal</h2>
-            <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-white/5 backdrop-blur-lg border border-white/10 rounded-full shadow-xl">
-              <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-              <span className="text-slate-300 text-sm sm:text-base font-medium whitespace-nowrap">Available for Opportunities</span>
+      <section className="min-h-screen flex items-center justify-center relative pt-20 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="mb-6">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8">Nrup Rawal</h2>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-lg border border-white/10 rounded-full shadow-xl">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+              <span className="text-slate-300 text-xs sm:text-sm font-medium">Available for Opportunities</span>
             </div>
           </div>
 
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 leading-tight px-2">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2">
             <span className="text-white">
               Bridging Technical Security &
             </span>
@@ -97,34 +95,34 @@ const Portfolio = () => {
             <span className="text-white">Business Strategy</span>
           </h1>
 
-          <div className="min-h-[3rem] sm:min-h-[3.5rem] mb-8 sm:mb-10 px-2">
-            <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-300 font-medium break-words leading-relaxed">
+          <div className="h-8 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-300 font-medium">
               {typedText}
               {showCursor && <span className="animate-pulse">|</span>}
             </p>
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-400 mb-10 sm:mb-14 max-w-5xl mx-auto leading-relaxed px-3 sm:px-4">
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             I translate complex security protocols into actionable business strategies. Specializing in ISO 27001 compliance, Azure security governance, and audit readiness.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center px-3 sm:px-4 max-w-2xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <a
               href="#projects"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-6 sm:px-7 md:px-9 py-4 sm:py-5 bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-2xl font-semibold shadow-xl flex items-center justify-center gap-2 hover:bg-white/15 transition-all cursor-pointer text-base sm:text-lg"
+              className="px-6 sm:px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-2xl font-semibold shadow-xl flex items-center justify-center gap-2 hover:bg-white/15 transition-all cursor-pointer"
             >
               View Work
-              <Briefcase size={20} />
+              <Briefcase size={18} />
             </a>
             <button
               onClick={downloadResume}
-              className="px-6 sm:px-7 md:px-9 py-4 sm:py-5 bg-white/5 backdrop-blur-lg border border-white/10 text-slate-300 rounded-2xl font-semibold flex items-center justify-center gap-2 hover:bg-white/10 transition-all cursor-pointer shadow-xl text-base sm:text-lg"
+              className="px-6 sm:px-8 py-4 bg-white/5 backdrop-blur-lg border border-white/10 text-slate-300 rounded-2xl font-semibold flex items-center justify-center gap-2 hover:bg-white/10 transition-all cursor-pointer shadow-xl"
             >
-              <Download size={20} />
+              <Download size={18} />
               Download Resume
             </button>
           </div>
@@ -132,25 +130,25 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-20 lg:py-32 px-3 sm:px-4 md:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 text-white leading-tight">
+      <section id="about" className="py-20 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-5xl font-bold mb-4 text-white">
               The Translator Between "Ops" and "Execs"
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-lg p-5 sm:p-6 lg:p-8 rounded-2xl lg:rounded-3xl border border-white/10 shadow-xl hover:bg-white/10 transition-all">
-            <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed mb-4 sm:mb-6">
+          <div className="bg-white/5 backdrop-blur-lg p-8 rounded-3xl border border-white/10 shadow-xl hover:bg-white/10 transition-all">
+            <p className="text-lg text-slate-300 leading-relaxed mb-6">
               Effective cybersecurity isn't just about firewalls; it's about governance. With a background in Computer Engineering and current MBA studies at National Forensic Sciences University, I possess a dual fluency: I can configure Microsoft Entra ID policies and draft the executive risk report explaining why they matter.
             </p>
-            <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg text-slate-300 leading-relaxed">
               Currently serving as a Documentation Specialist at Synoptek, I streamline audit readiness and process standardization for enterprise clients. My goal is simple: to build security frameworks that enable business growth rather than stifling it.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             {[
               { icon: Shield, title: 'GRC Focus', desc: 'ISO 27001 & Compliance' },
               { icon: Code, title: 'Technical Edge', desc: 'Azure & Cloud Security' },
@@ -158,11 +156,11 @@ const Portfolio = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white/5 backdrop-blur-lg p-5 sm:p-6 rounded-xl lg:rounded-2xl border border-white/10 shadow-xl hover:bg-white/10 transition-all"
+                className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/10 transition-all"
               >
-                <item.icon className="text-blue-400 mb-3 sm:mb-4" size={28} />
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">{item.title}</h3>
-                <p className="text-sm sm:text-base text-slate-400">{item.desc}</p>
+                <item.icon className="text-blue-400 mb-4" size={32} />
+                <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                <p className="text-slate-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -170,13 +168,13 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 sm:py-20 lg:py-32 px-3 sm:px-4 md:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+      <section id="experience" className="py-20 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-5xl font-bold mb-4 text-white">
               Experience
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
           </div>
 
           <div className="relative">
@@ -199,26 +197,18 @@ const Portfolio = () => {
               focus="Cloud & Identity Security"
               achievement="Hands-on management of Microsoft Entra ID and L1 security incidents. Resolved identity access management (IAM) tickets with a focus on minimizing downtime while maintaining least-privilege access."
             />
-
-            <TimelineItem
-              date="Jan 2024 – Jul 2024"
-              role="Support Engineer Intern"
-              company="Synoptek"
-              focus="Technical Support & Troubleshooting"
-              achievement="Provided technical support and troubleshooting for diverse client environments, managing Microsoft 365 administration, endpoint management, and security configurations. Skilled in diagnosing and resolving issues across Exchange, Entra ID, and compliance portals while ensuring minimal downtime and optimal system performance."
-            />
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 sm:py-20 lg:py-32 px-3 sm:px-4 md:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+      <section id="projects" className="py-20 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-5xl font-bold mb-4 text-white">
               Featured Projects
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
           </div>
 
           <div className="space-y-12">
@@ -368,13 +358,13 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 sm:py-20 lg:py-32 px-3 sm:px-4 md:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+      <section id="skills" className="py-20 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-5xl font-bold mb-4 text-white">
               Skills & Tools
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -420,16 +410,16 @@ const Portfolio = () => {
       </section>
 
       {/* Education & Certifications */}
-      <section className="py-16 sm:py-20 lg:py-32 px-3 sm:px-4 md:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+      <section className="py-20 sm:py-32 px-4 sm:px-6 relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-5xl font-bold mb-4 text-white">
               Education & Certifications
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Education */}
             <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/10 transition-all">
               <h3 className="text-2xl font-bold mb-6 text-white">Education</h3>
@@ -451,7 +441,7 @@ const Portfolio = () => {
             <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/10 transition-all">
               <h3 className="text-2xl font-bold mb-6 text-white">Certifications</h3>
               <div className="space-y-3">
-                <div className="flex items-start gap-3">
+                <div className="bg-white/5 backdrop-blur-lg border border-white/20 p-3 rounded-xl flex items-start gap-3">
                   <Award className="text-blue-400 mt-1 flex-shrink-0" size={20} />
                   <div className="flex-1">
                     <p className="font-semibold text-white">Azure Security Engineer Associate (AZ-500)</p>
@@ -499,27 +489,27 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 sm:py-20 lg:py-32 px-3 sm:px-4 md:px-6 lg:px-8 relative">
+      <section id="contact" className="py-20 sm:py-32 px-4 sm:px-6 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight">
+          <div className="mb-12">
+            <h2 className="text-5xl font-bold mb-6 text-white">
               Ready to secure your infrastructure?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-8 sm:mb-12 px-2">
+            <p className="text-xl text-slate-400 mb-12">
               Let's discuss how I can help strengthen your organization's security posture.
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-4 sm:gap-6">
+          <div className="flex flex-col items-center gap-6">
             <a
               href="mailto:contact@nruprawal.com"
-              className="flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-2xl font-semibold text-base sm:text-lg shadow-xl hover:bg-white/15 transition-all w-full sm:w-auto justify-center"
+              className="flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-2xl font-semibold text-lg shadow-xl hover:bg-white/15 transition-all"
             >
-              <Mail size={20} className="sm:w-6 sm:h-6" />
-              <span className="break-all">contact@nruprawal.com</span>
+              <Mail size={24} />
+              contact@nruprawal.com
             </a>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 w-full sm:w-auto items-center justify-center">
+            <div className="flex gap-6">
               {[
                 { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/nrup-rawal' },
                 { icon: Github, label: 'GitHub', href: 'https://github.com/nrup-rawal' }
@@ -529,7 +519,7 @@ const Portfolio = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-white/5 backdrop-blur-lg border border-white/10 text-slate-300 rounded-2xl hover:bg-white/10 transition-all shadow-xl font-semibold w-full sm:w-auto"
+                  className="flex items-center gap-2 px-6 py-3 bg-white/5 backdrop-blur-lg border border-white/10 text-slate-300 rounded-2xl hover:bg-white/10 transition-all shadow-xl"
                 >
                   <social.icon size={20} />
                   {social.label}
@@ -572,16 +562,24 @@ const TimelineItem = ({ date, role, company, focus, achievement }) => {
 
 // Skill Card Component
 const SkillCard = ({ title, skills }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
-    <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/10 transition-all h-full">
-      <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
-      <div className="space-y-2">
-        {skills.map((skill, i) => (
-          <div key={i} className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-            <span className="text-slate-300">{skill}</span>
-          </div>
-        ))}
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative group"
+    >
+      <div className={`bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 shadow-xl transition-all h-full ${isHovered ? 'bg-white/10' : ''}`}>
+        <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
+        <div className="space-y-2">
+          {skills.map((skill, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+              <span className="text-slate-300">{skill}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
