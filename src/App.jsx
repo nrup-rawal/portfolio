@@ -222,6 +222,77 @@ const Portfolio = () => {
           </div>
 
           <div className="space-y-12">
+            {/* Project 1: Sentinel-Auto-Isolate */}
+            <div className="bg-white/5 backdrop-blur-lg p-8 rounded-3xl border border-white/10 shadow-xl hover:bg-white/10 transition-all">
+              <div className="flex items-start justify-between mb-6">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full mb-4">
+                    <Shield size={16} className="text-cyan-400" />
+                    <span className="text-cyan-400 text-xs font-medium">SOAR AUTOMATION</span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-2 text-white">Sentinel-Auto-Isolate: Identity Threat SOAR</h3>
+                  <p className="text-slate-400 text-lg">An automated threat containment pipeline reducing incident response to milliseconds.</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                {[
+                  {
+                    title: 'Threat Detection',
+                    subtitle: 'SIEM Ingestion & Alerting',
+                    desc: 'Engineered Microsoft Sentinel rules to ingest Entra ID logs and instantly flag high-risk "Impossible Travel" anomalies.'
+                  },
+                  {
+                    title: 'Dynamic Orchestration',
+                    subtitle: 'JSON Array Parsing',
+                    desc: 'Built Azure Logic Apps with iterative loops to parse dynamic incident arrays and extract specific compromised user IDs.'
+                  },
+                  {
+                    title: 'API Remediation',
+                    subtitle: 'Graph API Integration',
+                    desc: 'Authenticated via OAuth 2.0 to execute `POST` requests to the `/revokeSignInSessions` endpoint, instantly destroying active session tokens.'
+                  },
+                  {
+                    title: 'Outcome',
+                    subtitle: 'Automated Containment',
+                    desc: 'Achieved zero-touch remediation, drastically reducing Mean Time to Respond (MTTR) while automatically notifying the SOC via SMTP.'
+                  }
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 shadow-lg hover:bg-white/10 transition-all"
+                  >
+                    <h4 className="text-xl font-semibold mb-1 text-white">{item.title}</h4>
+                    <p className="text-cyan-400 text-sm font-medium mb-2">{item.subtitle}</p>
+                    <p className="text-slate-400 text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-center gap-4 flex-wrap">
+                  <div className="flex items-center gap-2 text-emerald-400">
+                    <Check size={20} />
+                    <span className="font-semibold">Millisecond MTTR</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-blue-400">
+                    <Shield size={20} />
+                    <span className="font-semibold">Zero-Touch Containment</span>
+                  </div>
+                </div>
+                <a
+                  href="https://github.com/nrup-rawal/Azure-Sentinel-SOAR-Automation.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-2xl hover:bg-white/15 transition-all font-semibold shadow-xl"
+                >
+                  <Github size={20} />
+                  View on GitHub
+                  <ExternalLink size={16} />
+                </a>
+              </div>
+            </div>
+
             {/* Project Aegis */}
             <div className="bg-white/5 backdrop-blur-lg p-8 rounded-3xl border border-white/10 shadow-xl hover:bg-white/10 transition-all">
               <div className="flex items-start justify-between mb-6">
